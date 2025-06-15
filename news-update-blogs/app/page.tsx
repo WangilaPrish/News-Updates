@@ -1,52 +1,43 @@
-import React from 'react'
-import News from '@/components/News'
+'use client';
+
+import React from 'react';
+import News from '@/components/News';
 
 const page = () => {
     return (
         <div>
-            <div>
-                <h1 className="text-3xl font-bold underline">
-                    News & Updates
-                </h1>
-                <p className="mt-2 text-gray-600">
-                    Stay updated with the latest news and updates from our blog.
+            <section className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 bg-gray-300 my-13 font-serif" >
+                <h1 className="text-4xl font-bold mb-4">Latest News Updates</h1>
+                <p className="text-lg text-gray-700 max-w-xl">
+                    Stay updated with the latest news in technology, business, and innovation.
                 </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-9 p-6 place-items-center">
+            </section>
+
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
                 <News
-                    title="Latest Tech Trends"
-                    date="2023-10-01"
-                    description="Explore the latest trends in technology and how they are shaping our future."
-                    image="/assets/pexels-pixabay-373543.jpg"
+                    title="Tech Startups to Watch"
+                    date="2025-06-14"
+                    description="These 3 startups are turning heads with groundbreaking innovation."
+                    image="/assets/pexels-tara-winstead-8386364.jpg"
                 />
                 <News
-                    title="Health and Wellness Tips"
-                    date="2023-10-02"
-                    description="Discover tips and tricks to maintain a healthy lifestyle in today's fast-paced world."
-                    image="/assets/pexels-pixabay-373543.jpg"
+                    title="Clean Energy Boom"
+                    date="2025-06-13"
+                    description="How solar and wind are leading the next energy wave."
+                    image="/assets/pexels-tara-winstead-8386364.jpg"
                 />
                 <News
-                    title="Travel Destinations for 2023"
-                    date="2023-10-03"
-                    description="Uncover the best travel destinations to visit in 2023 and plan your next adventure."
-                    image="/assets/pexels-pixabay-373543.jpg"
-                />
-                <News
-                    title="Financial Planning for the Future"
-                    date="2023-10-04"
-                    description="Learn how to effectively plan your finances for a secure future."
-                    image="/assets/pexels-pixabay-373543.jpg"
-                />
-                <News
-                    title="Sustainable Living Practices"
-                    date="2023-10-05"
-                    description="Find out how to incorporate sustainable practices into your daily life."
-                    image="/assets/pexels-pixabay-373543.jpg"
+                    title="Smart Cities of the Future"
+                    date="2025-06-12"
+                    description="A look at AI-powered city infrastructure in 2035."
+                    image="/assets/pexels-tara-winstead-8386364.jpg"
                 />
             </div>
 
         </div>
-    )
-}
+    );
+};
 
-export default page
+export default page;

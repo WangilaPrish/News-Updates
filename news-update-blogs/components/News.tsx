@@ -1,28 +1,41 @@
-import Image from 'next/image';
 
-export interface NewsProps {
+import { Share2 } from 'lucide-react'; // Lucide icon (you can use any icon library)
+
+interface NewsProps {
     date: string;
     title: string;
     description: string;
-    image: string;
+    image: string; // URL to image
 }
+
 
 const News = ({ date, title, description, image }: NewsProps) => {
     return (
-        <div className="bg-white border border-gray-300 shadow rounded-4xl w-100">
-            <Image
-                src={image}
-                alt={title}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded"
-            />
-            <span className="text-sm text-gray-500 my-2 block px-4">{date}</span>
-            <h2 className="text-xl font-bold mt-2 px-4">{title}</h2>
-            <p className="text-gray-600 my-3 px-4">{description}</p>
+        <div
+            className="relative w-95 h-90 rounded-2xl overflow-hidden bg-cover bg-center shadow-md border border-gray-300 group transition-all duration-300"
+            style={{ backgroundImage: `url(${image})` }}
+        >
+            {/* Overlay for dark effect */}
+            <div className="absolute inset-0 bg-opacity-40"></div>
 
+            {/* Text content */}
+            <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10 font-serif">
+                <span className="text-sm text-gray-300">{date}</span>
+                <h2 className="text-2xl font-bold">{title}</h2>
+                <p className="text-sm mt-2">{description}</p>
+
+                {/* Hover controls */}
+                <div className="grid grid-cols-2 gap-2 mt-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <button className="text-black text-sm font-medium py-1 px-3 rounded hover:bg-gray-200">
+                        Read More
+                    </button>
+                    <button className="text-black p-2 rounded hover:bg-gray-200 flex items-center justify-center">
+                        <Share2 size={18} />
+                    </button>
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default News
+export default News;
