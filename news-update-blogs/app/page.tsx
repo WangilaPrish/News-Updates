@@ -5,7 +5,7 @@ import News from '@/components/News';
 
 const page = () => {
     return (
-        <div className='bg-slate-50'>
+        <div>
             <section
                 className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 my-13 font-serif"
                 style={{ backgroundColor: "a2d2ff" }} // ✅ added the "#" to the color

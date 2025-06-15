@@ -12,7 +12,7 @@ interface NewsProps {
 const News = ({ date, title, description, image }: NewsProps) => {
     return (
         <div
-            className="relative w-95 h-90 rounded-2xl overflow-hidden bg-cover bg-center shadow-md border border-gray-300 group transition-all duration-300"
+            className="relative w-95 h-90 rounded-2xl bg-slate-50 overflow-hidden bg-cover bg-center shadow-md border border-gray-300 group transition-all duration-300"
             style={{ backgroundImage: `url(${image})` }}
         >
             {/* Overlay for dark effect */}
