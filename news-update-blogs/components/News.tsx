@@ -16,7 +16,7 @@ const News = ({ date, title, description, image }: NewsProps) => {
             style={{ backgroundImage: `url(${image})` }}
         >
             {/* Overlay for dark effect */}
-            <div className="absolute inset-0 bg-opacity-40"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
             {/* Text content */}
             <div className="absolute inset-0 p-6 flex flex-col justify-end text-white z-10 font-serif">
