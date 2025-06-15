@@ -6,12 +6,16 @@ import News from '@/components/News';
 const page = () => {
     return (
         <div>
-            <section className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 bg-gray-300 my-13 font-serif" >
+            <section
+                className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 my-13 font-serif"
+                style={{ backgroundColor: "a2d2ff" }} // ✅ added the "#" to the color
+            >
                 <h1 className="text-4xl font-bold mb-4">Latest News Updates</h1>
                 <p className="text-lg text-gray-700 max-w-xl">
                     Stay updated with the latest news in technology, business, and innovation.
                 </p>
             </section>
+
 
 
 
