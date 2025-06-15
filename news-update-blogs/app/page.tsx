@@ -5,7 +5,7 @@ import News from '@/components/News';
 
 const page = () => {
     return (
-        <div>
+        <div className='bg-slate-50'>
             <section
                 className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 my-13 font-serif"
                 style={{ backgroundColor: "a2d2ff" }} // ✅ added the "#" to the color
@@ -15,9 +15,6 @@ const page = () => {
                     Stay updated with the latest news in technology, business, and innovation.
                 </p>
             </section>
-
-
-
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
                 <News
